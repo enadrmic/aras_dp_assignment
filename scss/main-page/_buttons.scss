@@ -1,0 +1,28 @@
+%btn {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    color: $text-color;
+    text-decoration: none;
+    border: 2px solid $text-color;
+  }
+
+  %news-btn {
+    @extend %btn;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.002em;
+    text-transform: uppercase;
+    background-color: $background-color;
+    margin-left: 0px;
+  
+    &:hover {
+      background-color: $text-color;
+      color: $background-color;
+      cursor: pointer;
+    }
+  }
+
+  

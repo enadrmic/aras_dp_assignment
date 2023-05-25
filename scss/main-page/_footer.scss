@@ -1,0 +1,108 @@
+// Desktop verzija
+
+footer {
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 88px;
+        padding-top: 56px;
+
+        .socials {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 70%;
+
+            .icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            #copyright {
+                color: $primary-color-medium;
+                cursor: default;
+                font-size: 16px;
+                margin-left: 405px;
+                white-space: nowrap;
+            }
+        }
+
+        .navigacija {
+            white-space: nowrap;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 30%;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                list-style: none;
+                gap: 32px;
+            }
+        }
+    }
+}
+
+// Mobilna verzija
+
+@media only screen and (max-width: 920px) {
+    footer {
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 61px;
+            padding-top: 0px;
+    
+            .socials {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: 32px;
+                width: 100%;
+                border-bottom: solid 2.5px $primary-color-light;
+
+    
+                .icons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 10px;
+                    width: 40px;
+                    height: 40px;
+                }
+    
+                #copyright {
+                    color: $primary-color-medium;
+                    cursor: default;
+                    font-size: 13px;
+                    margin-left: 66px;
+                    white-space: nowrap;
+                    padding-top: 8px;
+                }
+            }
+    
+            .navigacija {
+                white-space: nowrap;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                width: 100%;
+                padding-top: 32px;
+    
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    list-style: none;
+                    gap: 25px;
+                }
+            }
+        }
+    }
+}

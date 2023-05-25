@@ -1,0 +1,89 @@
+// Desktop verzija
+
+section {
+    .news-container {
+      overflow: hidden;
+      padding: 29.5px 31.5px;
+      position: relative;
+      text-transform: capitalize;
+      border-bottom: 2.5px solid $primary-color-light;
+
+      .news-wrapper {
+        padding-left: 100%;
+      }
+
+      .news-transition {
+        display: inline-block;
+        white-space: nowrap;
+        padding-right: 100%;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: ticker;
+        animation-duration: 20s;
+
+        .news-item {
+          display: inline-block;
+          padding-right: 64px;
+
+          svg {
+            margin-left: 8px;
+          }
+          }
+        .news-item::after {
+            content: "";
+            width: 2.5px;
+            height: 39px;
+            background: $primary-color-light;
+            position: absolute;
+            margin-left: 32px;
+            margin-top: -7.5px;
+        }
+        }
+
+      .news-transition:hover {
+          animation-play-state: paused;
+          cursor: pointer;
+          }   
+    }
+
+    @keyframes ticker {
+      0% {
+      transform: translate3d(0, 0, 0);
+      }
+      100% {
+      transform: translate3d(-100%, 0, 0);
+      }
+      }
+
+  }
+
+// Mobilna verzija
+
+@media only screen and (max-width: 920px) {
+    section {
+  
+        .news-container {
+          overflow: hidden;
+          padding: 10.19px 11.5px;
+          position: relative;
+          text-transform: capitalize;
+          border-bottom: 2.5px solid $primary-color-light;
+  
+          .news-wrapper {
+            padding-left: 100%;
+          }
+  
+          .news-item::after {
+            content: "";
+            width: 2.5px;
+            height: 32px;
+            background: $primary-color-light;
+            position: absolute;
+            margin-left: 32px;
+            margin-top: 6.19px;
+            margin-bottom: 7.5px;
+          }
+        }
+  
+      }
+}

@@ -1,0 +1,37 @@
+@import "./main-page/library";
+@import "./main-page/header";
+@import "./main-page/buttons";
+@import "./main-page/moving-vijesti";
+@import "./main-page/banner-vijest";
+@import "./main-page/izdvojene-vijesti";
+@import "./main-page/table";
+@import "./main-page/ostale-vijesti";
+@import "./main-page/footer";
+@import "./article-page/article";
+@import "./article-page/tekst";
+@import "./article-page/share";
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Kanit', sans-serif;
+  width: 100%;
+  height: 100%;
+  padding-left: 156px;
+  padding-right: 156px;
+}
+
+@media only screen and (max-width: 920px) {
+  body {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}

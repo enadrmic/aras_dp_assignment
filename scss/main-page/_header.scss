@@ -1,0 +1,91 @@
+// Desktop verzija
+
+header {
+    padding-bottom: 32px;
+    border-bottom: solid 2.5px $text-color;
+
+    .navbar-container {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logo_mobile,
+        .hamburger {
+            display: none;
+        }
+      
+
+        .logo_desktop {
+            padding-top: 48px;
+        }
+        
+
+        nav {
+            padding-top: 76px;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+
+                li {
+                    list-style: none;
+
+                    .nav-btn {
+                        @extend %btn;
+                        padding: 8px 16px;
+                        border-radius: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+
+                        &:hover {
+                            background-color: $text-color;
+                            color: $background-color;
+                        }
+
+                        svg {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// Mobilna verzija
+
+@media only screen and (max-width: 620px) {
+    header {
+        padding-top: 24px;
+        padding-bottom: 33.15px;
+        border-bottom: solid 2.5px $text-color;
+
+
+        .navbar-container{
+            .logo_desktop,
+            nav {
+                display: none;
+            }
+
+            .hamburger,
+            .logo_mobile {
+                display: block;
+            }
+
+            nav {
+                ul {
+                    position: fixed;
+                    width: 100%;
+                }
+            }
+        }
+
+
+        }
+    }

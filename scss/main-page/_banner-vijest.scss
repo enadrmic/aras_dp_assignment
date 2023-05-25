@@ -1,0 +1,127 @@
+// Desktop verzija
+
+section {
+    .banner-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 72px;
+        padding-bottom: 56px;
+        gap: 48px;
+        border-bottom: solid 2.5px $text-color;
+
+        .banner-heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 40px;
+
+            .button-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 16px;
+                white-space: nowrap;
+
+                #mobile-cat {
+                    display: none;
+                }
+
+                .banner-btn {
+                    @extend %btn;
+                    padding: 8px 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.002em;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $text-color;
+                    background-color: $background-color;
+                }
+
+            }
+
+            .banner-table {
+                @extend %table;
+            }
+        }
+
+        .banner-image {
+            img {
+                max-width: 100%;
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Mobilna verzija
+
+@media only screen and (max-width: 920px) {
+    section {
+        .banner-container {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            padding-top: 28px;
+            padding-bottom: 41px;
+            gap: 24px;
+            border-bottom: solid 2.5px $text-color;
+
+            .banner-heading {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 32px;
+
+                .button-info {
+
+                    white-space: normal;
+
+                    #mobile-cat {
+                        display: block;
+                    }
+
+                    #desktop-cat {
+                        display: none
+                    }
+
+                    .banner-btn {
+                        @extend %btn;
+                        padding: 4px 8px;
+                        line-height: 24px;
+                        letter-spacing: 0.002em;
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: $text-color;
+                        background-color: $background-color;
+                    }
+
+                }
+
+                .banner-table {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    p {
+                        padding-bottom: 24px;
+                        line-height: 24px;
+                        letter-spacing: 0.002em;
+                        color: $primary-color-medium;
+                    }
+                }
+            }
+
+            .banner-image {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

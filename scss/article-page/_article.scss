@@ -1,0 +1,269 @@
+// Desktop verzija
+
+section {
+    .article-container {
+        width: 100%;
+        padding-top: 29px;
+        padding-left: 290px;
+        padding-right: 290px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 60px;
+
+        .info {
+            p {
+                line-height: 32px;
+
+                span {
+                    background-color: $secondary-color-light;
+                }
+            }
+        }
+
+        .article-banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .banner-heading {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 32px;
+
+                .button-info {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    gap: 16px;
+                    white-space: normal;
+
+                    #mobile-cat {
+                        display: none;
+                    }
+
+                    #desktop-cat {
+                        display: block;
+                    }
+
+                    .banner-btn {
+                        @extend %btn;
+                        padding: 4px 8px;
+                        line-height: 24px;
+                        letter-spacing: 0.002em;
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: $text-color;
+                        background-color: $background-color;
+                    }
+
+                }
+
+                .banner-table {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    p {
+                        padding-bottom: 24px;
+                        line-height: 24px;
+                        letter-spacing: 0.002em;
+                        color: $primary-color-medium;
+                    }
+                }
+            }
+
+            .banner-image {
+
+                position: relative;
+
+                .ribbon1 {
+                    position: absolute;
+                    width: 150px;
+                    height: 150px;
+                    // background: $text-color;
+                    top: -10px;
+                    left: -10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .ribbon1::before {
+                    content: "";
+                    width: 100px;
+                    height: 40px;
+                    background: $secondary-color-dark;
+                    transform: rotate(-45deg) translateY(-50px);
+                }
+
+
+                .ribbon2 {
+                    position: absolute;
+                    width: 150px;
+                    height: 150px;
+                    // background: $text-color;
+                    bottom: 0px;
+                    right: -5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .ribbon2::before {
+                    content: "";
+                    width: 100px;
+                    height: 40px;
+                    background: $secondary-color-dark;
+                    transform: rotate(-45deg) translateY(50px);
+                }
+
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Mobilna verzija
+
+@media only screen and (max-width: 920px) {
+    section {
+        .article-container {
+            width: 100%;
+            padding-top: 24px;
+            padding-left: 0px;
+            padding-right: 0px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            gap: 36px;
+
+            .info {
+                p {
+                    line-height: 32px;
+
+                    span {
+                        background-color: $secondary-color-light;
+                    }
+                }
+            }
+
+            .article-banner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .banner-heading {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 32px;
+
+                    .button-info {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        gap: 16px;
+                        white-space: normal;
+
+                        #mobile-cat {
+                            display: block;
+                        }
+
+                        #desktop-cat {
+                            display: none;
+                        }
+
+                        .banner-btn {
+                            @extend %btn;
+                            padding: 4px 8px;
+                            line-height: 24px;
+                            letter-spacing: 0.002em;
+                            font-size: 16px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            color: $text-color;
+                            background-color: $background-color;
+                        }
+
+                    }
+
+                    .banner-table {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        p {
+                            padding-bottom: 24px;
+                            line-height: 24px;
+                            letter-spacing: 0.002em;
+                            color: $primary-color-medium;
+                        }
+                    }
+                }
+
+                .banner-image {
+
+                    position: relative;
+    
+                    .ribbon1 {
+                        position: absolute;
+                        width: 150px;
+                        height: 150px;
+                        // background: $text-color;
+                        top: -20px;
+                        left: -20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+    
+                    .ribbon1::before {
+                        content: "";
+                        width: 60px;
+                        height: 25px;
+                        background: $secondary-color-dark;
+                        transform: rotate(-45deg) translateY(-50px);
+                    }
+    
+    
+                    .ribbon2 {
+                        position: absolute;
+                        width: 150px;
+                        height: 150px;
+                        // background: $text-color;
+                        bottom: 0px;
+                        right: -5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+    
+                    .ribbon2::before {
+                        content: "";
+                        width: 60px;
+                        height: 25px;
+                        background: $secondary-color-dark;
+                        transform: rotate(-45deg) translateY(70px);
+                    }
+    
+    
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

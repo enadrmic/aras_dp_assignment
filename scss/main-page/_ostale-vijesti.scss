@@ -1,0 +1,94 @@
+// Desktop verzija
+
+section {
+    .other-news-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 56px;
+        padding-bottom: 118px;
+        border-bottom: solid 2.5px $primary-color-light;
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 52.83%;
+            gap: 48px;
+
+            .news-item {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                .news-info {
+                    width: 100%;
+                    padding-left: 24px;
+
+                    .banner-table {
+                        @extend %table;
+                        padding-bottom: 8px;
+                    }
+
+                    .other-news-btn {
+                        @extend %news-btn;
+                        padding: 4px 8px;
+                        font-size: 13px;
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+
+        #rectangle {
+            width: 40.42%;
+        }
+    }
+}
+
+// Mobilna verzija
+
+@media only screen and (max-width: 920px) {
+    section {
+        .other-news-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 35px;
+            padding-bottom: 74px;
+            border-bottom: none;
+
+    
+    
+            .news-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                gap: 48px;
+                padding-bottom: 40px;
+    
+                .news-item {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    img {
+                        min-width: 40%;
+                        height: auto;
+                    }
+    
+                    .news-info {
+                        width: 100%;
+                        padding-left: 24px;
+    
+                    }
+                }
+            }
+    
+            #rectangle {
+                width: 100%;
+            }
+        }
+    }
+}

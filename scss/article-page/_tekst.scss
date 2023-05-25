@@ -1,0 +1,41 @@
+// Desktop verzija
+
+section {
+    .tekst {
+
+        padding-top: 29px;
+        p {
+            line-height: 32px;
+            font-weight: 300;
+            padding-left: 290px;
+            padding-right: 290px;
+
+            span {
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Mobilna verzija
+
+@media only screen and (max-width: 920px) {
+    section {
+        .tekst {
+    
+            padding-top: 29px;
+            p {
+                line-height: 32px;
+                font-weight: 300;
+                padding-left: 0px;
+                padding-right: 0px;
+    
+                span {
+                    font-weight: 500;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
